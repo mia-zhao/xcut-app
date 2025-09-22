@@ -1,0 +1,156 @@
+{
+  "modeToggle": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "header": {
+    "siteName": "Vortex",
+    "menu": {
+      "home": { "name": "Startseite", "link": "/" },
+      "features": { "name": "Funktionen", "link": "#features" },
+      "pricing": { "name": "Preise", "link": "#pricing" },
+      "blog": { "name": "Blog", "link": "/blog" }
+    }
+  },
+  "hero": {
+    "headline": "Willkommen auf Ihrer außergewöhnlichen Website",
+    "description": "Entfesseln Sie das volle Potenzial unserer Plattform und heben Sie Ihr Unternehmen auf ein neues Niveau.",
+    "primary_cta": "Jetzt loslegen",
+
+    "secondary_cta": "Mehr entdecken"
+  },
+  "features": {
+    "title": "Hauptfunktionen",
+
+    "open-source": {
+      "name": "Open-Source-Flexibilität",
+      "description": "Nutzen Sie eine vollständig anpassbare Plattform kostenlos und fördern Sie Ihre Kreativität und Innovation."
+    },
+    "adaptive": {
+      "name": "Responsives Design",
+      "description": "Entwickelt, um eine hervorragende Benutzererfahrung auf allen Geräten zu bieten, vom Mobiltelefon bis zum Desktop."
+    },
+    "markdown": {
+      "name": "Markdown-Integration",
+      "description": "Erstellen und formatieren Sie Inhalte einfach mit Markdown, um Ihr Schreiberlebnis zu verbessern."
+    },
+    "seo": {
+      "name": "SEO-freundlich",
+      "description": "Mit SEO-Best-Practices entwickelt, um die Sichtbarkeit zu verbessern und mehr Besucher auf Ihre Website zu locken."
+    },
+    "quick": {
+      "name": "Schnelle Bereitstellung",
+      "description": "Starten Sie Ihre Website nahtlos mit Ein-Klick-Integration zu Top-Hosting-Diensten."
+    },
+    "global": {
+      "name": "Globale Sprachunterstützung",
+      "description": "Verbinden Sie sich mit einem weltweiten Publikum durch Unterstützung für mehrere Sprachen und verbessern Sie die Zugänglichkeit."
+    }
+  },
+  "pricing": {
+    "title": "Erschwingliche und transparente Preispläne",
+    "description": "Beginnen Sie heute mit der Optimierung Ihrer Website-Dienste",
+
+    "basic": {
+      "name": "Basis",
+      "monthlyPrice": "0,00 €",
+      "description": "Ideal für Einzelpersonen und kleine Unternehmen",
+      "features": "Website-Hosting, Basis-Support, 1 GB Speicherplatz, SSL-Zertifikat",
+      "buttonText": "Kostenlos starten",
+      "buttonVariant": "outline-solid",
+      "mostPopular": "false"
+    },
+    "standard": {
+      "name": "Standard",
+      "monthlyPrice": "49,00 €",
+      "description": "Perfekt für wachsende Unternehmen mit mehr Bedürfnissen",
+      "features": "Alle Basis-Funktionen, Eigene Domain, 5 GB Speicherplatz, E-Mail-Support, Analyse-Dashboard",
+      "buttonText": "Standard-Plan beitreten",
+      "buttonVariant": "default",
+      "mostPopular": "true"
+    },
+    "premium": {
+      "name": "Premium",
+      "monthlyPrice": "99,00 €",
+      "description": "Entwickelt für große Organisationen, die fortgeschrittene Funktionen benötigen",
+      "features": "Alle Standard-Funktionen, Unbegrenzter Speicherplatz, Prioritäts-Support, Erweiterte Sicherheitsfunktionen, Benutzerdefinierte Integrationen",
+      "buttonText": "Für Premium anmelden",
+      "buttonVariant": "outline-solid",
+      "mostPopular": "false"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "Über uns",
+      "description": "Wir sind bestrebt, außergewöhnlichen Service und qualitativ hochwertige Produkte anzubieten. Unsere Mission ist es, unsere Kunden durch Innovation und Integrität zu stärken."
+    },
+    "links": {
+      "title": "Schnellzugriffe",
+      "home": { "name": "Startseite", "link": "/" },
+      "features": { "name": "Funktionen", "link": "#features" },
+      "pricing": { "name": "Preise", "link": "#pricing" },
+      "blog": { "name": "Blog", "link": "/blog" }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": { "name": "E-Mail", "address": "info@yourcompany.com" },
+      "phone": { "name": "Telefon", "number": "(123) 456-7890" }
+    },
+    "social": {
+      "title": "Folgen Sie uns",
+      "twitter": "https://twitter.com/#",
+      "facebook": "https://facebook.com/#",
+      "github": "https://github.com/mia-zhao/vortex"
+    },
+    "message": "Alle Rechte vorbehalten."
+  },
+  "CookieConsent": {
+    "title": "Cookie-Einstellungen",
+    "description": "Wir verwenden Cookies, um Ihr Surferlebnis zu verbessern und unseren Datenverkehr zu analysieren. Bitte wählen Sie, ob Sie der Verwendung von Cookies zustimmen.",
+    "decline": "Ablehnen",
+    "accept": "Akzeptieren"
+  },
+  "MetaData": {
+    "title": "Vortex | Next.js Landing Page Vorlage",
+    "description": "Vortex bietet responsive Designs, nahtlose UI-Anpassung, Umschaltung zwischen Dunkel-/Hellmodus, mehrsprachige Unterstützung und mühelose Bereitstellung auf Cloudflare.",
+    "keywords": "Next.js,React,Tailwind CSS,Landing Page,Next.js Vorlage,i18n,SEO,Cloudflare",
+    "opengraph-description": "Moderne, responsive und SEO-freundliche Next.js Landing Page Vorlage mit mehrsprachiger Unterstützung."
+  },
+  "NotFound": {
+    "title": "404 - Seite nicht gefunden",
+    "description": "Oops! Die Seite, die Sie suchen, existiert nicht.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "Error": {
+    "title": "Oops! Etwas ist schiefgelaufen",
+    "description": "Wir entschuldigen uns für die Unannehmlichkeiten.",
+    "tryAgain": "Erneut versuchen",
+    "backHome": "Zurück zur Startseite"
+  },
+  "blog": {
+    "title": "Unser Blog",
+    "search": {
+      "title": "Suche",
+      "placeholder": "Blogbeiträge suchen",
+      "search": "Suchen"
+    },
+    "categories": {
+      "title": "Kategorien"
+    },
+    "recentPosts": {
+      "title": "Neueste Beiträge",
+      "noRecentPosts": "Keine aktuellen Beiträge verfügbar."
+    },
+    "readMore": "Weiterlesen",
+    "dateAndAuthor": "{date} | Von {author}",
+    "postCount": "Zeige {count} von {total} Beiträgen",
+    "postNotFound": "Keine Blogbeiträge gefunden, die Ihren Kriterien entsprechen.",
+    "breadcrumb": {
+      "home": "Startseite",
+      "blog": "Blog"
+    },
+    "author": "Autor: {author}",
+    "lastUpdate": "Letzte Aktualisierung: {date}"
+  }
+}

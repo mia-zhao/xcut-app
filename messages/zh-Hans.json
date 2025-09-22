@@ -1,0 +1,163 @@
+{
+  "modeToggle": {
+    "light": "浅色",
+    "dark": "深色",
+    "system": "系统"
+  },
+
+  "header": {
+    "siteName": "Vortex",
+    "menu": {
+      "home": { "name": "首页", "link": "/" },
+      "features": { "name": "功能", "link": "#features" },
+      "pricing": { "name": "价格", "link": "#pricing" },
+      "blog": { "name": "博客", "link": "/blog" }
+    }
+  },
+  "hero": {
+    "headline": "欢迎来到您的非凡网站",
+    "description": "释放我们平台的全部潜力，将您的业务提升到新的高度。",
+    "primary_cta": "立即开始",
+    "secondary_cta": "了解更多"
+  },
+  "features": {
+    "title": "主要功能",
+    "open-source": {
+      "name": "开源灵活性",
+      "description": "免费使用完全可定制的平台，激发您的创造力和创新。"
+    },
+    "adaptive": {
+      "name": "响应式设计",
+      "description": "专为在所有设备上提供出色的用户体验而设计，从手机到桌面。"
+    },
+    "markdown": {
+      "name": "Markdown 集成",
+      "description": "轻松使用 Markdown 创建和格式化内容，提升您的写作体验。"
+    },
+    "seo": {
+      "name": "SEO友好",
+      "description": "采用SEO最佳实践构建，提高可见性并吸引更多访问者到您的网站。"
+    },
+    "quick": {
+      "name": "快速部署",
+      "description": "通过一键集成顶级托管服务，无缝启动您的网站。"
+    },
+    "global": {
+      "name": "全球语言支持",
+      "description": "通过支持多种语言与全球受众联系，提高可访问性。"
+    }
+  },
+  "pricing": {
+    "title": "实惠透明的价格计划",
+    "description": "立即开始优化您的网站服务",
+    "basic": {
+      "id": "basic",
+      "name": "基础版",
+      "monthlyPrice": "¥0.00",
+      "description": "适合个人和小型企业",
+      "features": "网站托管, 基本支持, 1 GB存储空间, SSL证书",
+      "buttonText": "免费开始",
+      "buttonVariant": "outline-solid",
+      "mostPopular": "false"
+    },
+    "standard": {
+      "id": "standard",
+      "name": "标准版",
+      "monthlyPrice": "¥349.00",
+      "description": "适合需求更多的成长型企业",
+      "features": "所有基础功能, 自定义域名, 5 GB存储空间, 电子邮件支持, 分析仪表板",
+      "buttonText": "加入标准计划",
+      "buttonVariant": "default",
+      "mostPopular": "true"
+    },
+    "premium": {
+      "id": "premium",
+      "name": "高级版",
+      "monthlyPrice": "¥699.00",
+      "description": "为需要高级功能的大型组织设计",
+      "features": "所有标准功能, 无限存储空间, 优先支持, 高级安全功能, 自定义集成",
+      "buttonText": "注册高级版",
+      "buttonVariant": "outline-solid",
+      "mostPopular": "false"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "关于我们",
+      "description": "我们致力于提供卓越的服务和优质的产品。我们的使命是通过创新和诚信赋能我们的客户。"
+    },
+    "links": {
+      "title": "快速链接",
+      "home": { "name": "首页", "link": "/" },
+      "features": { "name": "功能", "link": "#features" },
+      "pricing": { "name": "定价", "link": "#pricing" },
+      "blog": { "name": "博客", "link": "/blog" }
+    },
+    "contact": {
+      "title": "联系",
+      "email": {
+        "name": "电子邮件",
+        "address": "info@yourcompany.com"
+      },
+      "phone": {
+        "name": "电话",
+        "number": "(123) 456-7890"
+      }
+    },
+    "social": {
+      "title": "关注我们",
+      "twitter": "https://twitter.com/#",
+      "facebook": "https://facebook.com/#",
+      "github": "https://github.com/mia-zhao/vortex"
+    },
+    "message": "所有权利保留。"
+  },
+  "CookieConsent": {
+    "title": "Cookie 设置",
+    "description": "我们使用 Cookie 来改善您的浏览体验并分析我们的流量。请选择是否同意我们使用 Cookie。",
+    "decline": "拒绝",
+    "accept": "接受"
+  },
+  "MetaData": {
+    "title": "Vortex | Next.js 登陆页面模板",
+    "description": "Vortex 提供响应式设计、无缝的用户界面自定义、深色/浅色模式切换、多语言支持，以及轻松部署到 Cloudflare。",
+    "keywords": "Next.js, React, Tailwind CSS, 登陆页面, Next.js 模板, i18n, SEO, Cloudflare",
+    "opengraph-description": "现代、响应式且 SEO 友好的 Next.js 登陆页面模板，支持多语言。"
+  },
+  "NotFound": {
+    "title": "404 - 页面未找到",
+    "description": "抱歉！您要找的页面不存在。",
+    "backHome": "返回首页"
+  },
+  "Error": {
+    "title": "抱歉！出现了问题",
+    "description": "我们为给您带来的不便表示歉意。",
+    "tryAgain": "再试一次",
+    "backHome": "返回首页"
+  },
+  "blog": {
+    "title": "我们的博客",
+    "search": {
+      "title": "搜索",
+      "placeholder": "搜索博客文章",
+      "search": "搜索"
+    },
+    "categories": {
+      "title": "分类"
+    },
+    "recentPosts": {
+      "title": "最新文章",
+      "noRecentPosts": "没有可用的最新文章。"
+    },
+    "readMore": "阅读更多",
+    "dateAndAuthor": "{date} | 作者 {author}",
+    "postCount": "显示 {count} 篇，共 {total} 篇文章",
+    "postNotFound": "没有找到符合您条件的博客文章。",
+    "breadcrumb": {
+      "home": "首页",
+      "blog": "博客"
+    },
+    "author": "作者: {author}",
+    "lastUpdate": "最后更新: {date}"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "modeToggle": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "header": {
+    "siteName": "Vortex",
+    "menu": {
+      "home": { "name": "Home", "link": "/" },
+      "features": { "name": "Features", "link": "#features" },
+      "pricing": { "name": "Pricing", "link": "#pricing" },
+      "blog": { "name": "Blog", "link": "/blog" }
+    }
+  },
+  "hero": {
+    "headline": "Welcome to Your Exceptional Website",
+    "description": "Unlock the full potential of our platform and elevate your business to new heights.",
+    "primary_cta": "Get Started Now",
+    "secondary_cta": "Discover More"
+  },
+  "features": {
+    "title": "Key Features",
+    "open-source": {
+      "name": "Open Source Flexibility",
+      "description": "Leverage a fully customizable platform at no cost, fueling your creativity and innovation."
+    },
+    "adaptive": {
+      "name": "Responsive Design",
+      "description": "Crafted to provide an outstanding user experience across all devices, from mobile to desktop."
+    },
+    "markdown": {
+      "name": "Markdown Integration",
+      "description": "Easily create and format content using Markdown, enhancing your writing experience."
+    },
+    "seo": {
+      "name": "SEO Friendly",
+      "description": "Built with SEO best practices to enhance visibility and attract more visitors to your site."
+    },
+    "quick": {
+      "name": "Quick Deployment",
+      "description": "Launch your website seamlessly with one-click integration to top hosting services."
+    },
+    "global": {
+      "name": "Global Language Support",
+      "description": "Connect with a worldwide audience through support for multiple languages, improving accessibility."
+    }
+  },
+  "pricing": {
+    "title": "Affordable and Transparent Pricing Plans",
+    "description": "Start optimizing your website services today",
+    "basic": {
+      "id": "basic",
+      "name": "Basic",
+      "monthlyPrice": "$0.00",
+      "description": "Ideal for individuals and small businesses",
+      "features": "Website Hosting, Basic Support, 1GB Storage, SSL Certificate",
+      "buttonText": "Get Started for Free",
+      "buttonVariant": "outline-solid",
+      "mostPopular": "false"
+    },
+    "standard": {
+      "id": "standard",
+      "name": "Standard",
+      "monthlyPrice": "$49.00",
+      "description": "Perfect for growing businesses with more needs",
+      "features": "All Basic Features, Custom Domain, 5GB Storage, Email Support, Analytics Dashboard",
+      "buttonText": "Join Standard Plan",
+      "buttonVariant": "default",
+      "mostPopular": "true"
+    },
+    "premium": {
+      "id": "premium",
+      "name": "Premium",
+      "monthlyPrice": "$99.00",
+      "description": "Designed for large organizations needing advanced features",
+      "features": "All Standard Features, Unlimited Storage, Priority Support, Advanced Security Features, Custom Integrations",
+      "buttonText": "Sign Up for Premium",
+      "buttonVariant": "outline-solid",
+      "mostPopular": "false"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "About Us",
+      "description": "We are dedicated to providing exceptional service and quality products. Our mission is to empower our customers through innovation and integrity."
+    },
+    "links": {
+      "title": "Quick Links",
+      "home": { "name": "Home", "link": "/" },
+      "features": { "name": "Features", "link": "#features" },
+      "pricing": { "name": "Pricing", "link": "#pricing" },
+      "blog": { "name": "Blog", "link": "blog" }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": { "name": "Email", "address": "info@yourcompany.com" },
+      "phone": { "name": "Phone", "number": "(123) 456-7890" }
+    },
+    "social": {
+      "title": "Follow Us",
+      "twitter": "https://twitter.com/#",
+      "facebook": "https://facebook.com/#",
+      "github": "https://github.com/mia-zhao/vortex"
+    },
+    "message": "All rights reserved."
+  },
+  "CookieConsent": {
+    "title": "Cookie Settings",
+    "description": "We use cookies to enhance your browsing experience and analyze our traffic. Please choose whether you consent to our use of cookies.",
+    "decline": "Decline",
+    "accept": "Accept"
+  },
+  "MetaData": {
+    "title": "Vortex | Next.js Landing Page Template",
+    "description": "Vortex offers responsive designs, seamless UI customization, dark/light mode toggle, multilingual support, and effortless deployment to Cloudflare.",
+    "keywords": "Next.js,React,Tailwind CSS,Landing Page,Next.js Template,i18n,SEO,Cloudflare",
+    "opengraph-description": "Modern, responsive, and SEO-friendly Next.js landing page template with multilingual support."
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "Oops! The page you're looking for doesn't exist.",
+    "backHome": "Return Home"
+  },
+  "Error": {
+    "title": "Oops! Something went wrong",
+    "description": "We apologize for the inconvenience.",
+    "tryAgain": "Try again",
+    "backHome": "Return Home"
+  },
+  "blog": {
+    "title": "Our Blog",
+    "search": {
+      "title": "Search",
+      "placeholder": "Search blog posts",
+      "search": "Search"
+    },
+    "categories": {
+      "title": "Categories"
+    },
+    "recentPosts": {
+      "title": "Recent Posts",
+      "noRecentPosts": "No recent posts available."
+    },
+    "readMore": "Read More",
+    "dateAndAuthor": "{date} | By {author}",
+    "postCount": "Showing {count} of {total} posts",
+    "postNotFound": "No blog posts found matching your criteria.",
+    "breadcrumb": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "author": "Author: {author}",
+    "lastUpdate": "Last Update: {date}"
+  }
+}
