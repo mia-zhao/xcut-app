@@ -1,0 +1,40 @@
+name: Deploy Vortex App
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Set Environment Variables
+        run: |
+          echo "CLOUDFLARE_PROJECT_NAME=${{ vars.CLOUDFLARE_PROJECT_NAME }}" >> $GITHUB_ENV
+          echo "CLOUDFLARE_DEPLOY_URL=${{ vars.CLOUDFLARE_DEPLOY_URL }}" >> $GITHUB_ENV
+
+      - name: Build Project
+        run: pnpm run pages:build
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./.vercel/output/static --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }}
