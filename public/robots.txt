@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vortex-app.pages.dev/sitemap.xml
+Sitemap: https://xcut.app/sitemap.xml

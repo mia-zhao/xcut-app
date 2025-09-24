@@ -1,23 +1,25 @@
 import { Metadata } from "next";
-import BaseLayout from "@/components/layout/base-layout";
-import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
+
+import BaseLayout from "@/components/layout/base-layout";
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import i18nConfig from "@/i18n/config";
+import { routing } from "@/i18n/routing";
+import { generateAlternates } from "@/lib/metadata";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale: locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
+export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const {locale} = await params;
+  const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: "MetaData" });
-  const { locales, defaultLocale } = i18nConfig;
+  const { defaultLocale } = i18nConfig;
 
   const title = t("title");
   const description = t("description");
@@ -25,7 +27,7 @@ export async function generateMetadata({
     .split(",")
     .map((keyword) => keyword.trim());
 
-  const baseUrl = process.env.CLOUDFLARE_DEPLOY_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://xcut.app";
   const url = locale === defaultLocale ? baseUrl : `${baseUrl}/${locale}`;
 
   return {
@@ -38,7 +40,7 @@ export async function generateMetadata({
       url,
       title,
       description,
-      siteName: "Vortex",
+      siteName: "XCut",
     },
     twitter: {
       card: "summary_large_image",
@@ -47,28 +49,25 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [
-          l,
-          l === defaultLocale ? baseUrl : `${baseUrl}/${l}`,
-        ])
-      ),
+      languages: generateAlternates(baseUrl, "/"),
     },
   };
 }
 
-export default async function Layout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}>) {
-  const {locale} = await params;
+export default async function Layout(
+  props: Readonly<{
+    children: React.ReactNode;
+    params: Promise<{ locale: string }>;
+  }>
+) {
+  const params = await props.params;
+  const { children } = props;
   return (
-    <BaseLayout locale={locale}>
-      <div className="relative min-h-screen flex flex-col font-(family-name:--font-geist-sans)">
-        {children}
+    <BaseLayout locale={params.locale}>
+      <div className="relative min-h-screen flex flex-col">
+        <Header />
+        <div className="flex grow">{children}</div>
+        <Footer />
       </div>
     </BaseLayout>
   );

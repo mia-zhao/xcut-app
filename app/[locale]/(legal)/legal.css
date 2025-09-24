@@ -1,0 +1,65 @@
+@reference "../../globals.css";
+
+main.legal {
+  @apply text-foreground;
+  @apply max-w-5xl mx-auto;
+
+  /* Main heading */
+  h1 {
+    @apply text-center text-4xl font-bold mb-4 mt-4;
+  }
+
+  /* Last Modified text */
+  h1 + p {
+    @apply text-center mt-4;
+  }
+
+  /* Section headings */
+  h2 {
+    @apply text-2xl font-semibold mt-12 mb-6 pb-2 border-b border-border;
+  }
+
+  /* Subsection headings */
+  h3 {
+    @apply text-xl font-medium mt-8 mb-4;
+  }
+
+  /* "In Short" sections */
+  em {
+    @apply block bg-gray-50 dark:bg-muted p-4 rounded-lg my-4;
+  }
+
+  /* Lists */
+  ul {
+    @apply space-y-2 my-4 ml-4 list-disc list-outside;
+  }
+
+  ul li {
+    @apply leading-relaxed;
+  }
+
+  /* Paragraphs */
+  p {
+    @apply leading-relaxed mb-4;
+  }
+
+  /* Strong/Bold text */
+  strong {
+    @apply font-semibold;
+  }
+
+  /* Links */
+  a {
+    @apply text-blue-600 dark:text-blue-400 hover:underline;
+  }
+
+  /* Article container */
+  article {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Code blocks */
+  code {
+    @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+}

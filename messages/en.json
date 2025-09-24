@@ -1,109 +1,161 @@
 {
+  "header": {
+    "menu": {
+      "home": { "name": "Home", "link": "/" },
+      "features": { "name": "Features", "link": "/#features" },
+      "pricing": { "name": "Pricing", "link": "/#pricing" },
+      "blog": { "name": "Blog", "link": "/blog" },
+      "download": { "name": "Download", "link": "/" }
+    }
+  },
+  "hero": {
+    "headline": "XCut",
+    "tagline": "Your keyboard shortcut assistant",
+    "description": "Press one hotkey to reveal every menu shortcut in your current app. Search instantly, stay focused, and discover hidden tools.",
+    "primary_cta": "Download Beta",
+    "secondary_cta": "Watch Demo",
+    "notice": "",
+    "highlights": {
+      "macos": "✓ Works on macOS 14.0 or later",
+      "binary": "✓ Native on Apple Silicon and Intel Macs"
+    }
+  },
+  "why": {
+    "pill": "Why XCut?",
+    "title": "Your instant shortcut assistant",
+    "description": "XCut shows every menu shortcut in real time — so you can focus on work, not hunting menus.",
+    "old": {
+      "title": "The old way slows you down",
+      "items": [
+        {
+          "title": "Menus break your focus",
+          "desc": "Clicking through layers of menus interrupts your rhythm and wastes time."
+        },
+        {
+          "title": "Shortcuts are hard to remember",
+          "desc": "Every app uses different shortcuts, and many useful shortcuts are hidden deep in menus."
+        }
+      ]
+    },
+    "new": {
+      "title": "XCut helps you work faster",
+      "items": [
+        {
+          "title": "See everything instantly",
+          "desc": "Press one hotkey to instantly reveal available menu shortcuts without leaving your app."
+        },
+        {
+          "title": "Search as you think",
+          "desc": "Type a few letters to find the right shortcut instantly — without memorizing."
+        }
+      ]
+    }
+  },
+  "features": {
+    "title": "Features",
+    "description": "XCut reveals every menu shortcut right when you need it — so you can work faster, stay focused, and uncover hidden tools in your apps.",
+    "screenshot_caption": "XCut showing menu shortcuts for the active application",
+    "screenshot_alt": "XCut in action showing menu shortcuts",
+    "grid": {
+      "native": {
+        "name": "Native Integration",
+        "description": "Lives quietly in your menu bar and blends in with the macOS experience."
+      },
+      "context": {
+        "name": "Context-Aware",
+        "description": "Automatically matches the app you're working in and updates instantly."
+      },
+      "globalShortcut": {
+        "name": "One Hotkey Away",
+        "description": "Summon the XCut overlay anytime with a global, customizable shortcut."
+      },
+      "deepScan": {
+        "name": "Deep Scan",
+        "description": "Handles apps with dynamic or complex menus, so no shortcut is out of reach."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "what-is-xcut": {
+        "q": "What is XCut?",
+        "a": "XCut is a keyboard shortcut assistant for macOS. It instantly shows you the available shortcuts for the app you're using, helping you work faster without memorizing every shortcut."
+      },
+      "why-accessibility": {
+        "q": "Why does XCut need Accessibility permission?",
+        "a": "XCut uses Apple's Accessibility API to read the menu structure of the app you're working in. This is how it detects available commands with shortcuts. XCut never records your keystrokes or sends personal data anywhere."
+      },
+      "which-apps": {
+        "q": "Which apps does XCut work with?",
+        "a": "XCut works with most macOS apps that use the standard menu structures. For apps with dynamic or complex menus, XCut's Deep Scan mode can detect commands more reliably. Some highly customized apps may have limited support."
+      },
+      "is-my-data-private": {
+        "q": "Is my data private?",
+        "a": "Yes. XCut runs locally on your Mac. Your clipboard history, shortcuts, and usage patterns are never tracked, logged, or sent anywhere. The only data that leaves your Mac is feedback you voluntarily submit through the feedback form."
+      },
+      "feedback": {
+        "q": "How do I give feedback?",
+        "a": "We'd love to hear your thoughts! You can send feedback directly <feedback>through our website</feedback> or via the feedback link inside the app."
+      },
+      "deep-scan": {
+        "q": "What is Deep Scan?",
+        "a": "Deep Scan is a feature that enables XCut to accurately detect commands within applications that utilize dynamic or complex menu structures. This feature is disabled by default. If you notice incomplete menus, you can activate Deep Scan to thoroughly load all available commands. It temporarily opens the menu bar to facilitate this scanning process."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple pricing",
+    "description": "Try XCut free for 7 days. Then purchase once for lifetime updates.",
+    "trial": {
+      "name": "Free Trial",
+      "description": "Full access to all features for 7 days. No credit card required.",
+      "price": "$0",
+      "price_suffix": " for 7 days",
+      "features": [
+        "Complete feature access",
+        "Works with your applications",
+        "Deep scan for dynamic menus",
+        "No registration required"
+      ],
+      "buttonText": "Download Free Trial"
+    },
+    "lifetime": {
+      "name": "Lifetime License",
+      "description": "Purchase once, own forever. Includes future updates and features.",
+      "price": "$7.99",
+      "price_suffix": " once",
+      "features": [
+        "One-time purchase",
+        "Lifetime updates included",
+        "Email support",
+        "Support indie development"
+      ],
+      "buttonText": "Purchase License"
+    },
+    "recommended": "Recommended"
+  },
   "modeToggle": {
     "light": "Light",
     "dark": "Dark",
     "system": "System"
   },
-  "header": {
-    "siteName": "Vortex",
-    "menu": {
-      "home": { "name": "Home", "link": "/" },
-      "features": { "name": "Features", "link": "#features" },
-      "pricing": { "name": "Pricing", "link": "#pricing" },
-      "blog": { "name": "Blog", "link": "/blog" }
-    }
-  },
-  "hero": {
-    "headline": "Welcome to Your Exceptional Website",
-    "description": "Unlock the full potential of our platform and elevate your business to new heights.",
-    "primary_cta": "Get Started Now",
-    "secondary_cta": "Discover More"
-  },
-  "features": {
-    "title": "Key Features",
-    "open-source": {
-      "name": "Open Source Flexibility",
-      "description": "Leverage a fully customizable platform at no cost, fueling your creativity and innovation."
-    },
-    "adaptive": {
-      "name": "Responsive Design",
-      "description": "Crafted to provide an outstanding user experience across all devices, from mobile to desktop."
-    },
-    "markdown": {
-      "name": "Markdown Integration",
-      "description": "Easily create and format content using Markdown, enhancing your writing experience."
-    },
-    "seo": {
-      "name": "SEO Friendly",
-      "description": "Built with SEO best practices to enhance visibility and attract more visitors to your site."
-    },
-    "quick": {
-      "name": "Quick Deployment",
-      "description": "Launch your website seamlessly with one-click integration to top hosting services."
-    },
-    "global": {
-      "name": "Global Language Support",
-      "description": "Connect with a worldwide audience through support for multiple languages, improving accessibility."
-    }
-  },
-  "pricing": {
-    "title": "Affordable and Transparent Pricing Plans",
-    "description": "Start optimizing your website services today",
-    "basic": {
-      "id": "basic",
-      "name": "Basic",
-      "monthlyPrice": "$0.00",
-      "description": "Ideal for individuals and small businesses",
-      "features": "Website Hosting, Basic Support, 1GB Storage, SSL Certificate",
-      "buttonText": "Get Started for Free",
-      "buttonVariant": "outline-solid",
-      "mostPopular": "false"
-    },
-    "standard": {
-      "id": "standard",
-      "name": "Standard",
-      "monthlyPrice": "$49.00",
-      "description": "Perfect for growing businesses with more needs",
-      "features": "All Basic Features, Custom Domain, 5GB Storage, Email Support, Analytics Dashboard",
-      "buttonText": "Join Standard Plan",
-      "buttonVariant": "default",
-      "mostPopular": "true"
-    },
-    "premium": {
-      "id": "premium",
-      "name": "Premium",
-      "monthlyPrice": "$99.00",
-      "description": "Designed for large organizations needing advanced features",
-      "features": "All Standard Features, Unlimited Storage, Priority Support, Advanced Security Features, Custom Integrations",
-      "buttonText": "Sign Up for Premium",
-      "buttonVariant": "outline-solid",
-      "mostPopular": "false"
-    }
-  },
   "footer": {
-    "about": {
-      "title": "About Us",
-      "description": "We are dedicated to providing exceptional service and quality products. Our mission is to empower our customers through innovation and integrity."
+    "about": "Your keyboard-first shortcut assistant for macOS. Discover shortcuts instantly and work faster.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "feedback": "Feedback"
     },
-    "links": {
-      "title": "Quick Links",
-      "home": { "name": "Home", "link": "/" },
-      "features": { "name": "Features", "link": "#features" },
-      "pricing": { "name": "Pricing", "link": "#pricing" },
-      "blog": { "name": "Blog", "link": "blog" }
+    "support": {
+      "title": "Support",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms"
     },
-    "contact": {
-      "title": "Contact",
-      "email": { "name": "Email", "address": "info@yourcompany.com" },
-      "phone": { "name": "Phone", "number": "(123) 456-7890" }
-    },
-    "social": {
-      "title": "Follow Us",
-      "twitter": "https://twitter.com/#",
-      "facebook": "https://facebook.com/#",
-      "github": "https://github.com/mia-zhao/vortex"
-    },
-    "message": "All rights reserved."
+    "message": "© 2025 XCut. Built with care for Mac users."
   },
   "CookieConsent": {
     "title": "Cookie Settings",
@@ -112,10 +164,10 @@
     "accept": "Accept"
   },
   "MetaData": {
-    "title": "Vortex | Next.js Landing Page Template",
-    "description": "Vortex offers responsive designs, seamless UI customization, dark/light mode toggle, multilingual support, and effortless deployment to Cloudflare.",
-    "keywords": "Next.js,React,Tailwind CSS,Landing Page,Next.js Template,i18n,SEO,Cloudflare",
-    "opengraph-description": "Modern, responsive, and SEO-friendly Next.js landing page template with multilingual support."
+    "title": "XCut | Keyboard Shortcut Assistant for macOS",
+    "description": "XCut shows every menu shortcut in real time — so you can focus on work, not hunting menus.",
+    "keywords": "macOS shortcuts, macOS, menu commands, keyboard shortcuts",
+    "opengraph-description": "XCut shows every menu shortcut in real time — so you can focus on work, not hunting menus."
   },
   "NotFound": {
     "title": "404 - Page Not Found",
@@ -128,29 +180,57 @@
     "tryAgain": "Try again",
     "backHome": "Return Home"
   },
-  "blog": {
-    "title": "Our Blog",
-    "search": {
-      "title": "Search",
-      "placeholder": "Search blog posts",
-      "search": "Search"
+  "feedback": {
+    "title": "Share Your Feedback",
+    "description": "Help us improve your experience by sharing your thoughts, suggestions, or reporting issues.",
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "email@example.com",
+        "description": "We'll only use this to follow up on your feedback."
+      },
+      "message": {
+        "label": "Your Feedback",
+        "placeholder": "Tell us what features you'd like to see, or any issues you've encountered...",
+        "description": "Please be as detailed as possible to help us understand your feedback."
+      },
+      "optional": "optional",
+      "required": "required",
+      "submit": "Send Feedback",
+      "submitting": "Sending...",
+      "category": {
+        "label": "Category",
+        "placeholder": "Select a category",
+        "options": {
+          "feature": "Feature Request",
+          "bug": "Bug Report",
+          "other": "Other"
+        }
+      },
+      "validation": {
+        "email": "Invalid email address",
+        "message": "Feedback message cannot be empty"
+      }
     },
-    "categories": {
-      "title": "Categories"
+    "success": {
+      "title": "Thank You!",
+      "description": "Your feedback has been submitted successfully. We appreciate you taking the time to help us improve XCut.",
+      "next": "Send Another Feedback"
     },
-    "recentPosts": {
-      "title": "Recent Posts",
-      "noRecentPosts": "No recent posts available."
+    "error": {
+      "title": "Submission Failed",
+      "description": "There was an error submitting your feedback. Please try again later.",
+      "confirm": "OK"
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms of Service | XCut",
+      "description": "XCut Terms and conditions"
     },
-    "readMore": "Read More",
-    "dateAndAuthor": "{date} | By {author}",
-    "postCount": "Showing {count} of {total} posts",
-    "postNotFound": "No blog posts found matching your criteria.",
-    "breadcrumb": {
-      "home": "Home",
-      "blog": "Blog"
-    },
-    "author": "Author: {author}",
-    "lastUpdate": "Last Update: {date}"
+    "privacy": {
+      "title": "Privacy Policy | XCut",
+      "description": "XCut Privacy Policy"
+    }
   }
 }

@@ -1,64 +1,111 @@
-# [Vortex](https://vortex-app.pages.dev)
+# XCut – Website & Legal
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). The project is a landing page + blog tempalte, built with [Next.js](https://nextjs.org), [Next Intl](https://next-intl-docs.vercel.app/), [MDX](https://mdxjs.com/), [Tailwind CSS](https://tailwindcss.com/), [Lucide](https://lucide.dev/icons/), [Shadcn UI](https://ui.shadcn.com/).
+This repository contains the XCut marketing site and legal pages, built with Next.js and localized with next‑intl. It includes a feedback form, light/dark/system theming, and deployment to Cloudflare Pages.
+
+## Tech Stack
+
+- Next.js App Router (React 19)
+- next‑intl for i18n
+- Tailwind CSS v4
+- shadcn/ui + Radix UI primitives
+- Lucide icons
+- Deployed on Cloudflare Pages via Wrangler/GitHub Actions
+
+## Requirements
+
+- Node.js 20+ (LTS recommended)
+- pnpm (preferred)
+- Cloudflare account (for Pages deployments)
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and start the dev server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Project Structure
 
-## Build
+- `app/` – Next.js app routes (App Router)
+  - `[locale]/` – localized routes
+- `components/` – UI and layout components
+- `i18n/` – next‑intl configuration
+- `messages/` – default locale messages (JSON)
+- `content/legal/` – MDX legal documents
+- `public/` – static assets
 
-To build the project, run the following command:
+## Environment Variables
+
+Create a `.env.local` (or use your platform’s env vars):
+
+```
+NEXT_PUBLIC_BASE_URL=https://xcut.app
+CLOUDFLARE_PROJECT_NAME=<your-pages-project>
+```
+
+## Scripts
 
 ```bash
-npm run build
+pnpm dev        # Start dev server
+pnpm build      # Production build
+pnpm start      # Start production server locally
+pnpm test       # Run unit tests (Jest + Testing Library)
+pnpm lint       # Run linters (if configured)
 ```
 
-Or build with [Cloudflare Pages](https://developers.cloudflare.com/pages/platform/build-configuration/#build-command):
+## i18n
+
+- Default locale: `en` (see `i18n/config.ts`)
+- Messages stored in `messages/en.json`
+- Use `useTranslations()` for localized strings
+
+## UI & Theming
+
+- Theming via `next-themes` with a toggle group (system/light/dark)
+- Components from shadcn/ui and Radix UI
+- Tailwind CSS utilities in `app/globals.css`
+
+## Feedback Form & Privacy
+
+- Feedback form posts to a Google Forms endpoint.
+- Errors are handled gracefully with a localized dialog.
+- Email field is required for follow‑up communications.
+- See `content/legal/en/privacy-policy.mdx` and `content/legal/en/terms-of-service.mdx` for data practices and terms.
+
+## Deployment (Cloudflare Pages)
+
+Build locally:
 
 ```bash
-npm run build:pages
+pnpm build
 ```
 
-## Deploy
-
-To deploy the project to Cloudflare, configure the `wrangler.toml` file with your project name and run the following command:
+Deploy with Wrangler (Pages):
 
 ```bash
-npm run deploy
+pnpm deploy
 ```
 
-To use the Github workflow to deploy the project to cloudflare, make sure to set the repository secrets and variables:
+GitHub Actions: configure `.github/workflows/deploy.yml` and set repository secrets/variables:
 
-```bash
-# secrets
-CLOUDFLARE_API_TOKEN=your-api-token
-CLOUDFLARE_ACCOUNT_ID=your-account-id
-# variables
-CLOUDFLARE_PROJECT_NAME=your-project-name
-CLOUDFLARE_DEPLOY_URL=your-deploy-url
 ```
+# Secrets
+CLOUDFLARE_API_TOKEN=***
+CLOUDFLARE_ACCOUNT_ID=***
 
-and push to the `main` branch.
+# Variables
+CLOUDFLARE_PROJECT_NAME=xcut-app
+NEXT_PUBLIC_BASE_URL=https://xcut.app
+```
 
 ## Contributing
 
-If you would like to contribute to this project, please fork the repository and create a pull request. Your feedback and contributions are welcome!
+Pull requests welcome! Please open an issue for significant changes.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT – see [LICENSE](LICENSE).

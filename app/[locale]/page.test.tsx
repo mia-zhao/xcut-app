@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
-import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { render, screen } from "@testing-library/react";
+import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { MemoryRouter } from "react-router-dom";
-import LocalePage from "./page";
 import * as en from "../../messages/en.json";
+import LocalePage from "./page";
 
 jest.mock("next-intl", () => {
   const originalModule = jest.requireActual("next-intl");
@@ -40,15 +40,18 @@ jest.mock("next-intl/navigation", () => {
 });
 
 test("renders /en/ with English content", async () => {
+  const pageJsx = await LocalePage({
+    params: Promise.resolve({ locale: "en" }),
+  } as { params: Promise<{ locale: string }> });
+
   render(
     <MemoryRouter>
-      <NextIntlClientProvider locale="en">
-        <LocalePage params={{ locale: "en" }} />
-      </NextIntlClientProvider>
+      <NextIntlClientProvider locale="en">{pageJsx}</NextIntlClientProvider>
     </MemoryRouter>
   );
-  const englishContents = await screen.findByText(
-    /Welcome to Your Exceptional Website/i
-  );
-  expect(englishContents).toBeInTheDocument();
+  const heading = await screen.findByRole("heading", {
+    level: 1,
+    name: /XCut/i,
+  });
+  expect(heading).toBeInTheDocument();
 });

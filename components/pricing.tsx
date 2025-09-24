@@ -1,4 +1,6 @@
+import { Check, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,68 +10,80 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Check } from "lucide-react";
 
 export default function Pricing() {
   const pricing = useTranslations("pricing");
-  const planKeys: Array<
-    Extract<keyof IntlMessages["pricing"], "basic" | "standard" | "premium">
-  > = ["basic", "standard", "premium"];
+  const plans = ["trial", "lifetime"] as const;
 
   return (
-    <section id="pricing" className="w-full py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4">
-          {pricing("title")}
-        </h2>
-        <p className="text-xl text-center text-muted-foreground mb-12">
-          {pricing("description")}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {planKeys.map((key) => {
+    <section id="pricing">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="mb-4">{pricing("title")}</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {pricing("description")}
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {plans.map((planKey) => {
             const plan = {
-              name: pricing(`${key}.name`),
-              description: pricing(`${key}.description`),
-              monthlyPrice: pricing(`${key}.monthlyPrice`),
-              features: pricing(`${key}.features`),
-              buttonText: pricing(`${key}.buttonText`),
-              buttonVariant: pricing(`${key}.buttonVariant`),
-              mostPopular: pricing(`${key}.mostPopular`),
+              name: pricing(`${planKey}.name`),
+              description: pricing(`${planKey}.description`),
+              price: pricing(`${planKey}.price`),
+              price_suffix: pricing(`${planKey}.price_suffix`),
+              features: pricing.raw(`${planKey}.features`),
+              buttonText: pricing(`${planKey}.buttonText`),
+              isPrimary: planKey === "lifetime",
             };
 
             return (
               <Card
-                key={key}
-                className={`flex flex-col ${
-                  plan.mostPopular === "true" ? "border-primary" : ""
+                key={planKey}
+                className={`relative flex flex-col text-center shadow-lg hover:shadow-xl transition-shadow ${
+                  plan.isPrimary
+                    ? "border-primary/50 ring-1 ring-primary/20"
+                    : "border-border/50"
                 }`}
               >
-                <CardHeader>
-                  <CardTitle>{plan.name}</CardTitle>
-                  <CardDescription>{plan.description}</CardDescription>
+                {plan.isPrimary && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                      <Star className="h-3 w-3" />
+                      {pricing("recommended")}
+                    </div>
+                  </div>
+                )}
+                <CardHeader className="pb-6">
+                  <CardTitle className="text-2xl font-semibold">
+                    {plan.name}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    {plan.description}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="grow">
-                  <p className="text-4xl font-bold mb-4">
-                    {plan.monthlyPrice}
-                    <span className="text-xl font-normal text-muted-foreground">
-                      /month
-                    </span>
-                  </p>
-                  <ul className="space-y-2">
-                    {plan.features
-                      .split(",")
-                      .map((feature: string, featureIndex: number) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <Check className="h-5 w-5 text-primary mr-2" />
-                          <span>{feature}</span>
+                <CardContent className="grow flex flex-col justify-between px-6">
+                  <div>
+                    <div className="mb-8">
+                      <span className="text-5xl font-bold">{plan.price}</span>
+                      <span className="text-lg font-normal text-muted-foreground ml-1">
+                        {plan.price_suffix}
+                      </span>
+                    </div>
+                    <ul className="space-y-4 text-left">
+                      {plan.features.map((feature: string, i: number) => (
+                        <li key={i} className="flex items-start">
+                          <Check className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{feature}</span>
                         </li>
                       ))}
-                  </ul>
+                    </ul>
+                  </div>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="pt-6">
                   <Button
-                    className="w-full"
-                    variant={plan.buttonVariant as "default" | "outline-solid"}
+                    className="w-full font-semibold"
+                    size="lg"
+                    variant={plan.isPrimary ? "default" : "outline"}
                   >
                     {plan.buttonText}
                   </Button>

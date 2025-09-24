@@ -1,4 +1,4 @@
-name: Deploy Vortex App
+name: Deploy XCut Landing Page
 on:
   push:
     branches:
@@ -24,7 +24,7 @@ jobs:
       - name: Set Environment Variables
         run: |
           echo "CLOUDFLARE_PROJECT_NAME=${{ vars.CLOUDFLARE_PROJECT_NAME }}" >> $GITHUB_ENV
-          echo "CLOUDFLARE_DEPLOY_URL=${{ vars.CLOUDFLARE_DEPLOY_URL }}" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_BASE_URL=${{ vars.NEXT_PUBLIC_BASE_URL }}" >> $GITHUB_ENV
 
       - name: Build Project
         run: pnpm run pages:build
