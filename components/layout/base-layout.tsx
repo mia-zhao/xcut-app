@@ -1,20 +1,15 @@
-import React, { ReactNode } from "react";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import localFont from "next/font/local";
+import { setRequestLocale } from "next-intl/server";
+import { Noto_Sans } from "next/font/google";
+import { notFound } from "next/navigation";
+import { ReactNode } from "react";
+
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Locale, routing } from "@/i18n/routing";
-import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
 
-const geistSans = localFont({
-  src: "../../public/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../../public/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const notoSans = Noto_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export default async function BaseLayout({
@@ -36,9 +31,11 @@ export default async function BaseLayout({
     // intentional, as the theme configuration is managed on the client side, leading
     // to potential differences during hydration.
     <html suppressHydrationWarning={true} lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/logo.svg" />
+      </head>
+      <body className={`${notoSans.className} antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"

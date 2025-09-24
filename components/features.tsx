@@ -1,61 +1,90 @@
-import { JSX } from "react";
-
-import { useTranslations } from "next-intl";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Code,
-  Smartphone,
-  Heading1,
-  Search,
-  Rocket,
-  Globe,
+  LaptopMinimal,
+  LaptopMinimalCheck,
+  LucideIcon,
+  Option,
+  ScanSearch,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
-const iconMap: { [key: string]: JSX.Element } = {
-  "open-source": <Code className="h-12 w-12 mb-4 text-primary" />,
-  adaptive: <Smartphone className="h-12 w-12 mb-4 text-primary" />,
-  markdown: <Heading1 className="h-12 w-12 mb-4 text-primary" />,
-  seo: <Search className="h-12 w-12 mb-4 text-primary" />,
-  quick: <Rocket className="h-12 w-12 mb-4 text-primary" />,
-  global: <Globe className="h-12 w-12 mb-4 text-primary" />,
+type Feature = {
+  key: keyof IntlMessages["features"]["grid"];
+  icon: LucideIcon;
 };
 
-type FeatureKey = Array<
-  Extract<
-    keyof IntlMessages["features"],
-    "open-source" | "adaptive" | "markdown" | "seo" | "quick" | "global"
-  >
->;
+export const features: Feature[] = [
+  {
+    key: "native",
+    icon: LaptopMinimal,
+  },
+  {
+    key: "context",
+    icon: LaptopMinimalCheck,
+  },
+  {
+    key: "globalShortcut",
+    icon: Option,
+  },
+  {
+    key: "deepScan",
+    icon: ScanSearch,
+  },
+];
 
 export default function Features() {
-  const features = useTranslations("features");
-  const keys: FeatureKey = Object.keys(iconMap) as FeatureKey;
+  const t = useTranslations("features");
 
   return (
-    <section id="features" className="w-full py-16 flex justify-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-accent-foreground text-center mb-12">
-          {features("title")}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {keys.map((key) => (
-            <Card
-              key={key}
-              className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <CardHeader className="flex items-center">
-                {iconMap[key]}
-                <CardTitle className="text-xl font-semibold">
-                  {features(`${key}.name`)}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">
-                  {features(`${key}.description`)}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+    <section id="features">
+      <div className="content">
+        {/* Header */}
+        <div className="mb-12">
+          <h2 className="mb-6">{t("title")}</h2>
+          <p className="text-center text-xl text-muted-foreground max-w-3xl mx-auto">
+            {t("description")}
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+          <div className="w-full md:w-1/2 flex flex-col items-center">
+            <div className="relative w-full max-h-[500px] flex justify-center">
+              <Image
+                src="/xcut-screenshot.png"
+                alt={t("screenshot_alt")}
+                width={0}
+                height={500}
+                className="rounded-2xl shadow-2xl h-auto max-h-[500px] w-auto"
+                sizes="(max-width: 768px) 100vw, 500px"
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+            <p className="text-sm text-muted-foreground mt-4 text-center">
+              {t("screenshot_caption")}
+            </p>
+          </div>
+          {/* Features (right on md+, bottom on mobile) */}
+          <div className="w-full md:w-1/2 flex flex-col justify-between h-auto">
+            <div className="flex flex-col gap-8 h-full place-content-evenly">
+              {features.map(({ key, icon: Icon }) => (
+                <div
+                  key={key}
+                  className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left"
+                >
+                  <div className="rounded-2xl bg-primary/10 p-4 w-16 h-16 flex items-center justify-center mb-2 sm:mb-0">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">
+                      {t(`grid.${key}.name`)}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {t(`grid.${key}.description`)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,13 +1,9 @@
-import CookieConsent from "@/components/common/cookie-consent";
-import ScrollButton from "@/components/common/scroll-button";
-import Features from "@/components/features";
-import Hero from "@/components/hero";
-import Footer from "@/components/layout/footer";
-import Header from "@/components/layout/header";
-import Pricing from "@/components/pricing";
 import { setRequestLocale } from "next-intl/server";
 
-export const dynamicParams = false;
+import FAQ from "@/components/faq";
+import Features from "@/components/features";
+import Hero from "@/components/hero";
+import WhyXCut from "@/components/why-xcut";
 
 export default async function Page({
   params,
@@ -17,16 +13,11 @@ export default async function Page({
   const locale = (await params).locale;
   setRequestLocale(locale);
   return (
-    <>
-      <Header />
-      <main className="flex flex-col gap-8 grow items-center sm:items-start">
-        <Hero />
-        <Features />
-        <Pricing />
-      </main>
-      <Footer />
-      <ScrollButton />
-      <CookieConsent />
-    </>
+    <main className="flex flex-col grow">
+      <Hero />
+      <WhyXCut />
+      <Features />
+      <FAQ />
+    </main>
   );
 }

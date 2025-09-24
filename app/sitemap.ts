@@ -1,12 +1,15 @@
 import { MetadataRoute } from "next";
+
 import i18nConfig from "@/i18n/config";
+
+export const dynamic = "force-static";
 
 const { locales, defaultLocale } = i18nConfig;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.CLOUDFLARE_DEPLOY_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const routes = ["", "/blog"];
+  const routes = ["", "/feedback", "/terms", "/privacy"];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
