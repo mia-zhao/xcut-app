@@ -1,11 +1,17 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useState } from "react";
 
+import BetaSignupDialog from "@/components/beta-signup-dialog";
+import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
 
 export default function Header() {
   const header = useTranslations("header");
   const keys: Array<keyof IntlMessages["header"]["menu"]> = ["features"];
+  const [showBetaSignup, setShowBetaSignup] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
@@ -42,15 +48,20 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center">
-            <Link
-              href="/"
+            <Button
+              onClick={() => setShowBetaSignup(true)}
               className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors shadow-sm"
             >
               {header("menu.download.name")}
-            </Link>
+            </Button>
           </div>
         </div>
       </div>
+
+      <BetaSignupDialog
+        open={showBetaSignup}
+        onOpenChange={setShowBetaSignup}
+      />
     </header>
   );
 }

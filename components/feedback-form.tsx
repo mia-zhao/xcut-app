@@ -25,13 +25,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-
-const GOOGLE_FORM_ID =
-  "1FAIpQLSeVVypmp7esgKhZHLahNGyVnDVGR4rvGzUM6loVb8dJ5CYJNg";
-const GOOGLE_FORM_URL = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
-const EMAIL_ENTRY_ID = "entry.456719025";
-const CATEGORY_ENTRY_ID = "entry.898720960";
-const DESCRIPTION_ENTRY_ID = "entry.1729187564";
+import {
+  Category,
+  CATEGORY_ENTRY_ID,
+  DESCRIPTION_ENTRY_ID,
+  EMAIL_ENTRY_ID,
+  GOOGLE_FORM_URL,
+} from "@/config/form";
 
 export default function FeedbackForm() {
   const t = useTranslations("feedback");
@@ -63,7 +63,7 @@ export default function FeedbackForm() {
     reValidateMode: "onChange",
     defaultValues: {
       email: "",
-      category: "feature",
+      category: "feature" as keyof typeof Category,
       message: "",
     },
   });
@@ -71,7 +71,10 @@ export default function FeedbackForm() {
   async function onSubmit(data: FeedbackFormValues) {
     const formData = new FormData();
     formData.append(EMAIL_ENTRY_ID, data.email);
-    formData.append(CATEGORY_ENTRY_ID, data.category);
+    formData.append(
+      CATEGORY_ENTRY_ID,
+      Category[data.category as keyof typeof Category]
+    );
     formData.append(DESCRIPTION_ENTRY_ID, data.message);
 
     try {
@@ -139,22 +142,18 @@ export default function FeedbackForm() {
               <Select
                 defaultValue={control._defaultValues.category}
                 onValueChange={(value) =>
-                  setValue("category", value as "feature" | "bug" | "other")
+                  setValue("category", value as keyof typeof Category)
                 }
               >
                 <SelectTrigger id="category">
                   <SelectValue placeholder={t("form.category.placeholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="feature">
-                    {t("form.category.options.feature")}
-                  </SelectItem>
-                  <SelectItem value="bug">
-                    {t("form.category.options.bug")}
-                  </SelectItem>
-                  <SelectItem value="other">
-                    {t("form.category.options.other")}
-                  </SelectItem>
+                  {Object.entries(Category).map(([key, value]) => (
+                    <SelectItem key={key} value={key}>
+                      {value}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             }
