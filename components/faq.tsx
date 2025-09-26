@@ -16,7 +16,7 @@ export default function FAQ() {
   return (
     <section id="faq">
       <div className="content">
-        <h2>{t("title")}</h2>
+        <h2 className="mb-8">{t("title")}</h2>
         <div className="space-y-4 max-w-4xl mx-auto">
           {faqKeys.map((key) => (
             <details

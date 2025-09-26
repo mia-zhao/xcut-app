@@ -4,6 +4,7 @@ import {
   LucideIcon,
   Option,
   ScanSearch,
+  Sliders,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -29,6 +30,10 @@ export const features: Feature[] = [
   {
     key: "deepScan",
     icon: ScanSearch,
+  },
+  {
+    key: "customizableOverlay",
+    icon: Sliders,
   },
 ];
 

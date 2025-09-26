@@ -67,11 +67,15 @@
       },
       "globalShortcut": {
         "name": "One Hotkey Away",
-        "description": "Summon the XCut overlay anytime with a global, customizable shortcut."
+        "description": "Open or close XCut overlay with a customizable global hotkey."
       },
       "deepScan": {
         "name": "Deep Scan",
         "description": "Handles apps with dynamic or complex menus, so no shortcut is out of reach."
+      },
+      "customizableOverlay": {
+        "name": "Customizable Overlay",
+        "description": "Customize opacity, drag to reposition, resize the panel, and optionally keep it above all other applications."
       }
     }
   },
