@@ -1,11 +1,16 @@
+"use client";
+
 import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import BetaSignupDialog from "@/components/beta-signup-dialog";
 
 export default function Hero() {
   const hero = useTranslations("hero");
+  const [showBetaSignup, setShowBetaSignup] = useState(false);
 
   return (
     <section>
@@ -30,6 +35,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 className="text-base px-8 py-3 font-semibold rounded-full shadow-lg hover:shadow-xl transition-shadow"
+                onClick={() => setShowBetaSignup(true)}
               >
                 <Download className="mr-2 h-4 w-4" />
                 {hero("primary_cta")}
@@ -53,6 +59,11 @@ export default function Hero() {
           />
         </div>
       </div>
+
+      <BetaSignupDialog
+        open={showBetaSignup}
+        onOpenChange={setShowBetaSignup}
+      />
     </section>
   );
 }

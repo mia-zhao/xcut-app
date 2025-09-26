@@ -5,14 +5,14 @@
       "features": { "name": "Features", "link": "/#features" },
       "pricing": { "name": "Pricing", "link": "/#pricing" },
       "blog": { "name": "Blog", "link": "/blog" },
-      "download": { "name": "Download", "link": "/" }
+      "download": { "name": "Get Beta Access", "link": "/" }
     }
   },
   "hero": {
     "headline": "XCut",
     "tagline": "Your keyboard shortcut assistant",
     "description": "Press one hotkey to reveal every menu shortcut in your current app. Search instantly, stay focused, and discover hidden tools.",
-    "primary_cta": "Download Beta",
+    "primary_cta": "Get Beta Access",
     "secondary_cta": "Watch Demo",
     "notice": "",
     "highlights": {
@@ -220,6 +220,32 @@
     "error": {
       "title": "Submission Failed",
       "description": "There was an error submitting your feedback. Please try again later.",
+      "confirm": "OK"
+    }
+  },
+  "betaSignup": {
+    "title": "Get Beta Access",
+    "description": "Be among the first to try XCut! Enter your email and we'll notify you when the beta is ready.",
+    "form": {
+      "email": {
+        "label": "Email Address",
+        "placeholder": "your@email.com"
+      },
+      "submit": "Get Beta Access",
+      "submitting": "Submitting...",
+      "cancel": "Not Now",
+      "validation": {
+        "email": "Please enter a valid email address"
+      }
+    },
+    "success": {
+      "title": "You're In!",
+      "description": "Thanks for your interest! We'll email you as soon as XCut beta is available.",
+      "close": "Got It"
+    },
+    "error": {
+      "title": "Submission Failed",
+      "description": "There was an error submitting your request. Please try again later.",
       "confirm": "OK"
     }
   },
