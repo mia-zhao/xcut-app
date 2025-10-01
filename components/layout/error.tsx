@@ -9,7 +9,7 @@ export default function ErrorPage({
   errorMsg: IntlMessages["Error"];
 }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 text-center">
+    <div className="w-full flex flex-col items-center justify-center p-8 text-center">
       <h1 className="text-4xl font-bold mb-4">{errorMsg["title"]}</h1>
       <p className="text-xl mb-8">{errorMsg["description"]}</p>
       <div className="flex space-x-4">

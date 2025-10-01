@@ -262,5 +262,24 @@
       "title": "Privacy Policy | XCut",
       "description": "XCut Privacy Policy"
     }
+  },
+  "blog": {
+    "title": "XCut Blog",
+    "subtitle": "Guides, tips, and updates to help you master keyboard shortcuts on macOS",
+    "metadata": {
+      "title": "Blog - XCut | Keyboard Shortcut Guides & Tips",
+      "description": "Learn how to install XCut, master keyboard shortcuts, and boost your productivity on macOS with our comprehensive guides and tips."
+    },
+    "readMore": "Read article",
+    "backToBlog": "Back to Blog",
+    "publishedOn": "Published on",
+    "readingTime": "{time} min read",
+    "by": "By {author}",
+    "noPosts": "No blog posts yet. Check back soon!",
+    "toc": {
+      "title": "Table of Contents",
+      "loading": "Loading table of contents...",
+      "readingProgress": "Reading Progress"
+    }
   }
 }
