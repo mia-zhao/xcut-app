@@ -9,17 +9,6 @@ function generateSlug(text: string): string {
 }
 
 export const mdxComponents: MDXComponents = {
-  h1: ({ children }) => {
-    const slug = generateSlug(children?.toString() || "");
-    return (
-      <h1
-        id={slug}
-        className="text-center text-3xl md:text-4xl font-bold text-foreground mb-4 mt-12 first:mt-0 leading-tight scroll-mt-24"
-      >
-        {children}
-      </h1>
-    );
-  },
   h2: ({ children }) => {
     const slug = generateSlug(children?.toString() || "");
     return (
