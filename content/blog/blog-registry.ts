@@ -22,7 +22,6 @@ for (const slug of BLOG_SLUGS) {
 
 export type BlogFrontmatter = {
   title: string;
-  author: string;
   date: string;
   categories: string[];
   excerpt: string;
@@ -42,17 +41,17 @@ export async function getBlogPosts(
 
   for (const slug of BLOG_SLUGS) {
     try {
-      const rawContent = await (blogRegistry[slug][locale] ||
-        blogRegistry[slug][i18nConfig.defaultLocale]);
+      const blogPost = await getBlogPost(slug, locale);
 
-      if (!rawContent) {
+      if (!blogPost) {
         continue;
       }
 
-      const { frontmatter } = await compileMDX(rawContent);
-      const readingTime = calculateReadingTime(rawContent);
-
-      posts.push({ ...frontmatter, slug, readingTime });
+      posts.push({
+        ...blogPost.frontmatter,
+        slug,
+        readingTime: blogPost.readingTime,
+      });
     } catch (e) {
       console.warn(`Failed to load blog post: ${slug}`, e);
     }

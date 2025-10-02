@@ -1,7 +1,7 @@
 import { BookOpen } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import BlogCard from "@/components/blog-card";
+import BlogCard from "@/components/blog/blog-card";
 import { getBlogPosts } from "@/content/blog/blog-registry";
 import { Locale } from "@/i18n/routing";
 import { generateAlternates } from "@/lib/metadata";
@@ -14,16 +14,15 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.metadata" });
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://xcut.app";
+
   return {
     title: t("title"),
     description: t("description"),
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
+    canonical: `${baseUrl}/blog`,
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
-      languages: generateAlternates(
-        process.env.NEXT_PUBLIC_BASE_URL || "https://xcut.app",
-        "/blog"
-      ),
+      canonical: `${baseUrl}/blog`,
+      languages: generateAlternates(baseUrl, "/blog"),
     },
   };
 }

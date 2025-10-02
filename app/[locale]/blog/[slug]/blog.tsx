@@ -1,21 +1,13 @@
-"use client";
-
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { useFormatter, useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
+import { mdxComponents } from "@/components/blog/mdx-components";
+import TableOfContents from "@/components/blog/table-of-contents";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BlogFrontmatter } from "@/content/blog/blog-registry";
 import { Link } from "@/i18n/routing";
-import TableOfContents from "./table-of-contents";
-
-const BlogContent = dynamic(() => import("./blog-content"), {
-  ssr: false,
-  loading: () => (
-    <div className="animate-pulse h-96 bg-muted/20 rounded-md"></div>
-  ),
-});
 
 interface BlogProps {
   content: string;
@@ -83,8 +75,8 @@ export default function Blog({ content, frontmatter, readingTime }: BlogProps) {
             </header>
 
             {/* Content */}
-            <div>
-              <BlogContent content={content} />
+            <div className="prose prose-lg max-w-none">
+              <MDXRemote source={content} components={mdxComponents} />
             </div>
 
             {/* Footer */}
@@ -101,8 +93,8 @@ export default function Blog({ content, frontmatter, readingTime }: BlogProps) {
             </div>
           </article>
 
-          {/* Table of Contents Sidebar */}
-          <aside className="lg:col-span-1">
+          {/* Table of Contents Sidebar - Hidden on mobile */}
+          <aside className="hidden lg:block lg:col-span-1">
             <div className="sticky top-8">
               <TableOfContents />
             </div>

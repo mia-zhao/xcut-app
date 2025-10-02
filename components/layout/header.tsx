@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="content py-6">
-        <div className="grid grid-cols-3 items-center gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 items-center gap-4">
           {/* Logo - Left */}
           <div className="flex justify-start">
             <Link
