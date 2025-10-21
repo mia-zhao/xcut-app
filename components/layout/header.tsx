@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 
-import BetaSignupDialog from "@/components/beta-signup-dialog";
+import DownloadDialog from "@/components/download-dialog";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
 
@@ -65,10 +65,7 @@ export default function Header() {
         </div>
       </div>
 
-      <BetaSignupDialog
-        open={showBetaSignup}
-        onOpenChange={setShowBetaSignup}
-      />
+      <DownloadDialog open={showBetaSignup} onOpenChange={setShowBetaSignup} />
     </header>
   );
 }

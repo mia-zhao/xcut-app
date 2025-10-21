@@ -227,29 +227,40 @@
       "confirm": "OK"
     }
   },
-  "betaSignup": {
-    "title": "Get Beta Access",
-    "description": "Be among the first to try XCut! Enter your email and we'll notify you when the beta is ready.",
+  "downloadSignup": {
+    "downloading": {
+      "title": "Downloading XCut Beta...",
+      "description": "{file} is being downloaded."
+    },
+    "success": {
+      "title": "Download Complete!",
+      "description": "To install, open the DMG and drag XCut to your Applications folder."
+    },
+    "failed": {
+      "title": "Download Failed",
+      "description": "Sorry, the download failed to start. Please use the direct link below:",
+      "directLink": "Download {file}"
+    },
+    "emailDescription": "Stay in the loop with XCut news, tips, and special offers.",
     "form": {
       "email": {
-        "label": "Email Address",
         "placeholder": "your@email.com"
       },
-      "submit": "Get Beta Access",
-      "submitting": "Submitting...",
-      "cancel": "Not Now",
+      "submit": "Subscribe",
+      "submitting": "Subscribing...",
+      "skip": "No Thanks",
       "validation": {
         "email": "Please enter a valid email address"
       }
     },
-    "success": {
-      "title": "You're In!",
-      "description": "Thanks for your interest! We'll email you as soon as XCut beta is available.",
+    "emailSuccess": {
+      "title": "Subscription Confirmed!",
+      "description": "Thanks for subscribing! You'll be the first to know about new updates and offers.",
       "close": "Got It"
     },
     "error": {
-      "title": "Submission Failed",
-      "description": "There was an error submitting your request. Please try again later.",
+      "title": "Subscription Failed",
+      "description": "There was an error processing your subscription. Please try again later.",
       "confirm": "OK"
     }
   },
