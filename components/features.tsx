@@ -1,8 +1,8 @@
 import {
-  LaptopMinimal,
   LaptopMinimalCheck,
   LucideIcon,
   Option,
+  PlayCircle,
   ScanSearch,
   Sliders,
 } from "lucide-react";
@@ -16,15 +16,15 @@ type Feature = {
 
 export const features: Feature[] = [
   {
-    key: "native",
-    icon: LaptopMinimal,
-  },
-  {
     key: "context",
     icon: LaptopMinimalCheck,
   },
   {
-    key: "globalShortcut",
+    key: "instantExecution",
+    icon: PlayCircle,
+  },
+  {
+    key: "keyboardControl",
     icon: Option,
   },
   {
@@ -58,7 +58,7 @@ export default function Features() {
                 alt={t("screenshot_alt")}
                 width={0}
                 height={500}
-                className="rounded-2xl shadow-2xl h-auto max-h-[500px] w-auto"
+                className="rounded shadow-2xl h-auto max-h-[500px] w-auto"
                 sizes="(max-width: 768px) 100vw, 500px"
                 style={{ objectFit: "contain" }}
               />
