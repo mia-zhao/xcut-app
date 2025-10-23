@@ -10,8 +10,8 @@
   },
   "hero": {
     "headline": "XCut",
-    "tagline": "Your keyboard shortcut assistant",
-    "description": "Press one hotkey to reveal every menu shortcut in your current app. Search instantly, stay focused, and discover hidden tools.",
+    "tagline": "Work faster across your Mac apps",
+    "description": "Press one hotkey to find and run menu commands in your current app. Search instantly, stay focused, and uncover shortcuts across your Mac.",
     "primary_cta": "Get Beta Access",
     "secondary_cta": "Watch Demo",
     "notice": "",
@@ -22,18 +22,18 @@
   },
   "why": {
     "pill": "Why XCut?",
-    "title": "Your instant shortcut assistant",
+    "title": "Your instant command assistant",
     "description": "XCut shows every menu shortcut in real time — so you can focus on work, not hunting menus.",
     "old": {
       "title": "The old way slows you down",
       "items": [
         {
           "title": "Menus break your focus",
-          "desc": "Clicking through layers of menus interrupts your rhythm and wastes time."
+          "desc": "Clicking through layers of menus interrupts your flow and wastes time."
         },
         {
           "title": "Shortcuts are hard to remember",
-          "desc": "Every app uses different shortcuts, and many useful shortcuts are hidden deep in menus."
+          "desc": "Every app uses different shortcuts, and many powerful commands stay hidden."
         }
       ]
     },
@@ -41,41 +41,41 @@
       "title": "XCut helps you work faster",
       "items": [
         {
-          "title": "See everything instantly",
-          "desc": "Press one hotkey to instantly reveal available menu shortcuts without leaving your app."
+          "title": "See and do everything instantly",
+          "desc": "Press one hotkey to instantly reveal available shortcuts and menu items, without leaving your app."
         },
         {
-          "title": "Search as you think",
-          "desc": "Type a few letters to find the right shortcut instantly — without memorizing."
+          "title": "Search, pin, and execute",
+          "desc": "Type to search, pin favorites for quick access, or run commands instantly."
         }
       ]
     }
   },
   "features": {
     "title": "Features",
-    "description": "XCut reveals every menu shortcut right when you need it — so you can work faster, stay focused, and uncover hidden tools in your apps.",
+    "description": "XCut is more than a shortcut viewer — it's your command launcher for macOS. Instantly find and run any menu command, reveal hidden tools, and stay in flow.",
     "screenshot_caption": "XCut showing menu shortcuts for the active application",
     "screenshot_alt": "XCut in action showing menu shortcuts",
     "grid": {
-      "native": {
-        "name": "Native Integration",
-        "description": "Lives quietly in your menu bar and blends in with the macOS experience."
+      "instantExecution": {
+        "name": "Find & Run Instantly",
+        "description": "Search and execute any menu command or shortcut with a click — no need to memorize."
+      },
+      "keyboardControl": {
+        "name": "Keyboard Control",
+        "description": "Navigate with Tab and arrow keys, collapse or expand groups with ←/→, execute with Enter, and pin with Space."
       },
       "context": {
         "name": "Context-Aware",
-        "description": "Automatically matches the app you're working in and updates instantly."
-      },
-      "globalShortcut": {
-        "name": "One Hotkey Away",
-        "description": "Open or close XCut overlay with a customizable global hotkey."
+        "description": "Automatically detects your current app and displays the relevant commands."
       },
       "deepScan": {
-        "name": "Deep Scan",
-        "description": "Handles apps with dynamic or complex menus, so no shortcut is out of reach."
+        "name": "Deep Menu Scan",
+        "description": "Works with apps that have dynamic or complex menus, so no command is out of reach."
       },
       "customizableOverlay": {
         "name": "Customizable Overlay",
-        "description": "Customize opacity, drag to reposition, resize the panel, and optionally keep it above all other applications."
+        "description": "Adjust opacity, reposition or resize the panel, and choose whether it stays on top of all windows."
       }
     }
   },
