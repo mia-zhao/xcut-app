@@ -36,7 +36,7 @@ interface DownloadDialogProps {
 }
 
 const DOWNLOAD_PATH = "/downloads";
-const DOWNLOAD_VERSION = "XCut-0.9.2-beta.dmg";
+const DOWNLOAD_VERSION = "XCut-0.9.3-beta.dmg";
 
 type DownloadStatus = "downloading" | "success" | "failed";
 
