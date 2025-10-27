@@ -109,35 +109,21 @@
     }
   },
   "pricing": {
-    "title": "Simple pricing",
-    "description": "Try XCut free for 7 days. Then purchase once for lifetime updates.",
-    "trial": {
-      "name": "Free Trial",
-      "description": "Full access to all features for 7 days. No credit card required.",
-      "price": "$0",
-      "price_suffix": " for 7 days",
-      "features": [
-        "Complete feature access",
-        "Works with your applications",
-        "Deep scan for dynamic menus",
-        "No registration required"
-      ],
-      "buttonText": "Download Free Trial"
-    },
+    "title": "Simple, One-Time Purchase",
+    "description": "Get lifetime access to XCut with a single purchase. No subscriptions, no recurring fees.",
     "lifetime": {
       "name": "Lifetime License",
-      "description": "Purchase once, own forever. Includes future updates and features.",
-      "price": "$7.99",
-      "price_suffix": " once",
-      "features": [
-        "One-time purchase",
-        "Lifetime updates included",
-        "Email support",
-        "Support indie development"
-      ],
-      "buttonText": "Purchase License"
-    },
-    "recommended": "Recommended"
+      "description": "Purchase once, own forever. Includes all future updates and features.",
+      "price": "$9.90",
+      "price_suffix": "one-time purchase",
+      "features": {
+        "all": "Lifetime access to all features",
+        "updates": "All future updates included",
+        "trial": "7-day free trial",
+        "refund": "14-day money-back guarantee"
+      },
+      "buttonText": "Buy Now"
+    }
   },
   "modeToggle": {
     "light": "Light",
