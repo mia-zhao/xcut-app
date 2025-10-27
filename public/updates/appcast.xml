@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>XCut</title>
+        <item>
+            <title>0.9.3-beta</title>
+            <pubDate>Sun, 26 Oct 2025 19:51:56 -0700</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.9.3-beta</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>XCut Release Notes</title>
+  </head>
+  <body>
+    <h4>New Features</h4>
+    <ul>
+      <li>
+        <b>All-New Settings Panel:</b> The entire settings window has been
+        redesigned with a cleaner, more modern interface that is easier to
+        navigate.
+      </li>
+      <li>
+        <b>Check for Updates:</b> XCut now displays version information and can
+        check for updates manually.
+      </li>
+      <li>
+        <b>Floating Icon:</b> A new, optional floating icon provides quick
+        access to the overlay. Enable it in the "Appearance" settings.
+      </li>
+    </ul>
+
+    <h4>Improvements</h4>
+    <ul>
+      <li>
+        <b>Improved Keyboard Navigation:</b> Navigating the overlay window is
+        now more intuitive. You can seamlessly use the Tab and arrow keys to
+        move between shortcuts and groups.
+      </li>
+    </ul>
+  </body>
+</html>
+]]></description>
+            <enclosure url="https://xcut.app/updates/XCut-0.9.3-beta.dmg" length="3605013" type="application/octet-stream" sparkle:edSignature="a82qhvwXJ+iOuoHFJCOvCGdcOa51t7VDQdfY1VGElSnS8I+uiNb55ezBl6Bzuk6AONOuuPEZd2W0+5nRqqitDg=="/>
+        </item>
+    </channel>
+</rss>
