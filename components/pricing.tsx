@@ -30,7 +30,6 @@ export default function Pricing() {
               name: pricing(`${planKey}.name`),
               description: pricing(`${planKey}.description`),
               price: pricing(`${planKey}.price`),
-              price_suffix: pricing(`${planKey}.price_suffix`),
               features: pricing.raw(`${planKey}.features`),
               buttonText: pricing(`${planKey}.buttonText`),
               isPrimary: planKey === "lifetime",
@@ -65,9 +64,6 @@ export default function Pricing() {
                   <div>
                     <div className="mb-8">
                       <span className="text-5xl font-bold">{plan.price}</span>
-                      <span className="text-lg font-normal text-muted-foreground ml-1">
-                        {plan.price_suffix}
-                      </span>
                     </div>
                     <ul className="space-y-4 text-left">
                       {plan.features.map((feature: string, i: number) => (
