@@ -35,8 +35,8 @@ interface DownloadDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const DOWNLOAD_PATH = "/downloads";
-const DOWNLOAD_VERSION = "XCut-0.9.3-beta.dmg";
+const DOWNLOAD_PATH = "/updates";
+const DOWNLOAD_VERSION = "XCut-0.9.4-beta.dmg";
 
 type DownloadStatus = "downloading" | "success" | "failed";
 

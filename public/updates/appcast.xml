@@ -3,6 +3,31 @@
     <channel>
         <title>XCut</title>
         <item>
+            <title>0.9.4-beta</title>
+            <pubDate>Wed, 29 Oct 2025 16:31:46 -0700</pubDate>
+            <sparkle:version>20251029</sparkle:version>
+            <sparkle:shortVersionString>0.9.4-beta</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>XCut Release Notes</title>
+  </head>
+  <body>
+    <h4>Improvements</h4>
+    <ul>
+      <li>Overlay now follows across Spaces for better workflow</li>
+    </ul>
+  </body>
+</html>
+]]></description>
+            <enclosure url="https://xcut.app/updates/XCut-0.9.4-beta.dmg" length="3605095" type="application/octet-stream" sparkle:edSignature="zW0A+BRAoQ1jD3wXLDCmCR5nKIN/uuKgAhHEsa//nngLd1/LLHixuxOmrtZxj5cfIkgOeVsGnvGF3NfqqyBZBw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://xcut.app/updates/XCut20251029-1.delta" sparkle:deltaFrom="1" length="69522" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="2K1ZVeR56FfayHI5if8fyMATpEVKgAK+TNmQ+pE2EPXO3PljUB6GqH/ZufEg7uqWH0dJ6MbFGHzwKJoGqJvEAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.9.3-beta</title>
             <pubDate>Sun, 26 Oct 2025 19:51:56 -0700</pubDate>
             <sparkle:version>1</sparkle:version>
