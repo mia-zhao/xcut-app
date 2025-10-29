@@ -1,12 +1,13 @@
 "use client";
 
-import { Download } from "lucide-react";
+import { Download, ShoppingCart } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 
 import DownloadDialog from "@/components/download-dialog";
 import { Button } from "@/components/ui/button";
+import { purchaseUrl } from "@/lib/constants";
 
 export default function Hero() {
   const hero = useTranslations("hero");
@@ -31,15 +32,32 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-              <Button
-                size="lg"
-                className="text-base px-8 py-3 font-semibold rounded-full shadow-lg hover:shadow-xl transition-shadow"
-                onClick={() => setShowDownloadModal(true)}
-              >
-                <Download className="mr-2 h-4 w-4" />
-                {hero("primary_cta")}
-              </Button>
+            <div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                <Button
+                  size="lg"
+                  className="text-base px-8 py-3 font-semibold rounded-full shadow-lg hover:shadow-xl transition-shadow"
+                  onClick={() => setShowDownloadModal(true)}
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  {hero("primary_cta")}
+                </Button>
+                <a
+                  href={purchaseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="text-base px-8 py-3 font-semibold rounded-full shadow"
+                  >
+                    <ShoppingCart className="mr-2 h-4 w-4" />
+                    {hero("purchase_cta")}
+                  </Button>
+                </a>
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground text-center lg:text-left">{hero("trial_note")}</p>
             </div>
 
             <div className="space-y-3">
