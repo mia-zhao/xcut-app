@@ -3,6 +3,41 @@
     <channel>
         <title>XCut</title>
         <item>
+            <title>1.0.0</title>
+            <pubDate>Mon, 24 Nov 2025 20:56:38 -0800</pubDate>
+            <sparkle:version>20251124</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>XCut Release Notes</title>
+  </head>
+  <body>
+    <h4>New Features</h4>
+    <ul>
+      <li>
+        <b>Search by Shortcut:</b> Search for shortcuts by typing the name of a
+        modifier key (like "command", "cmd", or "shift") or a letter key (like
+        "K") and pressing Enter.
+      </li>
+      <li>
+        <b>7-Day Trial & Licensing:</b> XCut now includes a 7-day free trial
+        period. After the trial, you can purchase a license to continue using
+        all features.
+      </li>
+    </ul>
+  </body>
+</html>
+]]></description>
+            <enclosure url="https://xcut.app/updates/XCut-1.0.0.dmg" length="3784646" type="application/octet-stream" sparkle:edSignature="lIGRvn/IoBn3C6miNdLslsv7VuyZ2r5a7MH/U6viwqWUwq4qDC9uzCVphkSIw/bi2vVFXc7TfKoZeEjsYLmhDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://xcut.app/updates/XCut20251124-20251029.delta" sparkle:deltaFrom="20251029" length="336998" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dt2MoaJKE+bHZApxszjdzXJxYCmLJZ2jE10u3UtIEGAb96hvI3bNpn8zAxfngFWSmMFpDSuiEqv2YK//bJkrBQ=="/>
+                <enclosure url="https://xcut.app/updates/XCut20251124-1.delta" sparkle:deltaFrom="1" length="337662" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="njP5KMWQAXMQu3mHAyderkilm7RBaeKNV7UTn6+S1Rt5f8cYKIncSmYAL2vqMM0LdXgaaknlIvA2Xh0UvZcaAA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.9.4-beta</title>
             <pubDate>Wed, 29 Oct 2025 16:31:46 -0700</pubDate>
             <sparkle:version>20251029</sparkle:version>
