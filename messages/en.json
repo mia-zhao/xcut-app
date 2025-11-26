@@ -3,22 +3,24 @@
     "menu": {
       "home": { "name": "Home", "link": "/" },
       "features": { "name": "Features", "link": "/#features" },
-      "pricing": { "name": "Pricing", "link": "/#pricing" },
+      "pricing": { "name": "Pricing", "link": "/pricing" },
       "blog": { "name": "Blog", "link": "/blog" },
-      "download": { "name": "Get Beta Access", "link": "/" }
+      "download": { "name": "Download Free Trial", "link": "/" }
     }
   },
   "hero": {
     "headline": "XCut",
     "tagline": "Work faster across your Mac apps",
     "description": "Press one hotkey to find and run menu commands in your current app. Search instantly, stay focused, and uncover shortcuts across your Mac.",
-    "primary_cta": "Get Beta Access",
+    "primary_cta": "Download Free Trial",
+    "purchase_cta": "Get License",
     "secondary_cta": "Watch Demo",
     "notice": "",
     "highlights": {
       "macos": "✓ Works on macOS 14.0 or later",
       "binary": "✓ Native on Apple Silicon and Intel Macs"
-    }
+    },
+    "trial_note": "7-day free trial. No credit card required."
   },
   "why": {
     "pill": "Why XCut?",
@@ -110,16 +112,14 @@
   },
   "pricing": {
     "title": "Simple, One-Time Purchase",
-    "description": "Get lifetime access to XCut with a single purchase. No subscriptions, no recurring fees.",
+    "description": "Get lifetime access to XCut. No subscriptions, no recurring fees.",
     "lifetime": {
       "name": "Lifetime License",
       "description": "Purchase once, own forever. Includes all future updates and features.",
-      "price": "$9.90",
-      "price_suffix": "one-time purchase",
+      "price": "$7.99",
       "features": {
-        "all": "Lifetime access to all features",
+        "all": "One-time purchase, yours forever",
         "updates": "All future updates included",
-        "trial": "7-day free trial",
         "refund": "14-day money-back guarantee"
       },
       "buttonText": "Buy Now"

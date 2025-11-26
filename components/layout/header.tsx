@@ -2,19 +2,19 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import DownloadDialog from "@/components/download-dialog";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   const header = useTranslations("header");
-  const keys: Array<keyof IntlMessages["header"]["menu"]> = [
-    "features",
-    "blog",
-  ];
+  const keys: Array<keyof IntlMessages["header"]["menu"]> = ["pricing", "blog"];
   const [showBetaSignup, setShowBetaSignup] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
@@ -44,7 +44,13 @@ export default function Header() {
                 <div key={key.toString()}>
                   <Link
                     href={header(`menu.${key}.link`)}
-                    className="px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-gradient-to-r hover:from-background/90 hover:to-background/80 hover:shadow-sm rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
+                    className={cn(
+                      "px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-gradient-to-r hover:from-background/90 hover:to-background/80 hover:shadow-sm rounded-full transition-all duration-300 hover:scale-105 active:scale-95",
+                      {
+                        "text-foreground bg-background shadow-sm":
+                          pathname.startsWith(header(`menu.${key}.link`)),
+                      }
+                    )}
                   >
                     {header(`menu.${key}.name`)}
                   </Link>

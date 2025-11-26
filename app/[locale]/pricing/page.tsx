@@ -2,6 +2,8 @@ import { Check } from "lucide-react";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { purchaseUrl } from "@/lib/constants";
+
 export const dynamicParams = false;
 
 export default async function PricingPage({
@@ -14,7 +16,7 @@ export default async function PricingPage({
   const t = await getTranslations("pricing");
   const featureKeys: Array<
     keyof IntlMessages["pricing"]["lifetime"]["features"]
-  > = ["all", "updates", "trial", "refund"];
+  > = ["all", "updates", "refund"];
 
   return (
     <div className="max-w-5xl py-8 mx-auto my-auto px-4">
@@ -27,7 +29,7 @@ export default async function PricingPage({
         </p>
       </div>
 
-      <div className="mt-16 flex justify-center">
+      <div className="mt-8 flex justify-center">
         <div className="w-full max-w-sm rounded-3xl bg-background p-8 ring-1 ring-border/40">
           <h3 className="text-lg font-semibold leading-8 text-foreground">
             {t("lifetime.name")}
@@ -37,20 +39,17 @@ export default async function PricingPage({
             <span className="text-4xl font-bold tracking-tight text-foreground">
               {t("lifetime.price")}
             </span>
-            <span className="text-base font-medium text-muted-foreground">
-              / {t("lifetime.price_suffix")}
-            </span>
           </div>
           <p className="mt-6 text-base leading-7 text-muted-foreground">
             {t("lifetime.description")}
           </p>
 
-          {/* <a
-            href="#"
+          <a
+            href={purchaseUrl}
             className="mt-8 block w-full rounded-md bg-primary py-2 px-3 text-center text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             {t("lifetime.buttonText")}
-          </a> */}
+          </a>
 
           <ul
             role="list"
