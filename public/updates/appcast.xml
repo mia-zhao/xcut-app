@@ -3,6 +3,46 @@
     <channel>
         <title>XCut</title>
         <item>
+            <title>1.0.1</title>
+            <pubDate>Sat, 29 Nov 2025 16:54:21 -0800</pubDate>
+            <sparkle:version>20251129</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>XCut Release Notes</title>
+  </head>
+  <body>
+    <h4>New Features</h4>
+    <ul>
+      <li>
+        <b>Option to launch at login:</b> You can now configure XCut to launch
+        automatically when you log in to your Mac.
+      </li>
+      <li>
+        <b>7-Day Trial & Licensing:</b> XCut now includes a 7-day free trial
+        period. After the trial, you can purchase a license to continue using
+        all features.
+      </li>
+    </ul>
+    <h4>Improvements</h4>
+    <ul>
+      <li>Search is now cleared when switching apps.</li>
+      <li>UI updates to the feedback window and search bar.</li>
+    </ul>
+  </body>
+</html>
+]]></description>
+            <enclosure url="https://xcut.app/updates/XCut-1.0.1.dmg" length="3783932" type="application/octet-stream" sparkle:edSignature="vk6OZTs7lQOrnnJUHH0NXPRu4EhFhHbDJ5GTAUIlPQzO6Z3dJTMaDXZvxxDXuOZJK784LZNnOMKkRG7+mhE7DA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://xcut.app/updates/XCut20251129-20251124.delta" sparkle:deltaFrom="20251124" length="204598" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5sm2Nk56FQJsqe+VPt2IlXpLPx3BXna/LaH4ZA8khVKviLruavfVmkny7WW1lntoh3LemQ4eKkQ8ZAQlNaPLCQ=="/>
+                <enclosure url="https://xcut.app/updates/XCut20251129-20251029.delta" sparkle:deltaFrom="20251029" length="362954" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gNno32GzwwHSNkrMxz6PKK/crAMSusy7y8dBDlo0cRwPVzgM0AFqowo0qaqy4CY1LQTz7N0H6UIuMHswMTm2Dg=="/>
+                <enclosure url="https://xcut.app/updates/XCut20251129-1.delta" sparkle:deltaFrom="1" length="362854" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="7XugtLDGkJaw0rrOiqkmeK25gcvg0frrUlBhjaPfTd+M4qlOsWxKA4xlPNNuSP33MTs/9MOqUnTG88Hol9PXCg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.0</title>
             <pubDate>Mon, 24 Nov 2025 20:56:38 -0800</pubDate>
             <sparkle:version>20251124</sparkle:version>
